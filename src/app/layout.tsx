@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { JetBrains_Mono } from "next/font/google";
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-jetbrainsMono",
+});
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+//Componnets
+import Header from "@/components/ui/Header";
+import PageTransitionLayout from "./PageTransitionLayout";
+import StairTransition from "./StairTransition";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,10 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${jetbrainsMono.variable} antialiased`}>
+        <Header />
+        <PageTransitionLayout>{children}</PageTransitionLayout>
+        <StairTransition />
       </body>
     </html>
   );
