@@ -50,7 +50,7 @@ const experience = {
   description: "I have 2+ years of experience in web development.",
   items: [
     {
-      company: "Ethioden PLC",
+      company: "Intern at Ethioden PLC",
       position: "Fullstack Developer",
       duration: "2024-06 - 2024-09",
     },
@@ -64,12 +64,12 @@ const education = {
   items: [
     {
       intitution: "Bahir Dar University",
-      degree: "Software Engineer",
+      degree: "Software Engineering",
       duration: "2020-Present",
     },
     {
       intitution: "ALX",
-      degree: "Software Engineer",
+      degree: "Software Engineering",
       duration: "2023-Present",
     },
   ],
