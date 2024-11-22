@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import Photo from "@/components/ui/Photo";
 import Social from "@/components/ui/Social";
@@ -5,6 +6,49 @@ import Stats from "@/components/ui/Stats";
 import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
+  const handleDownload = async () => {
+    const response = await fetch("/assets/cv.pdf");
+    if (response)
+    {
+      const reader = response.body?.getReader();
+
+      let receivedLength = 0;
+      const chunks = [];
+      while (reader)
+      {
+        const { done, value } = await reader.read();
+
+        if (done)
+        {
+          break;
+        }
+
+        chunks.push(value);
+        receivedLength += value.length;
+      }
+      const chunksAll = new Uint8Array(receivedLength);
+      let position = 0;
+      for (const chunk of chunks)
+      {
+        chunksAll.set(chunk, position);
+        position += chunk.length;
+      }
+
+      // Create a blob from the chunks
+      const blob = new Blob([chunksAll]);
+      const download_url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = download_url;
+      link.download = "CV" + ".pdf";
+      document.body.appendChild(link);
+      link.click();
+
+      // Cleanup
+      window.URL.revokeObjectURL(download_url);
+      document.body.removeChild(link);
+    }
+  };
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full ">
@@ -24,6 +68,9 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 className="capitalize flex items-center gap-2"
+                onClick={() => {
+                  handleDownload();
+                }}
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
