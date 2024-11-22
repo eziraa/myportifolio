@@ -53,7 +53,7 @@ const projects = [
     title: "Payroll",
     description: "Payroll management system to manage employee payroll like deductions , allowances and ovetime and also report .",
     href: "",
-    img: "/assets/work/payroll.png",
+    img: "/assets/work/payroll.jpg",
     tooltipContent: " Payroll",
     github: "https://github.com",
     stack: [
@@ -69,7 +69,7 @@ const projects = [
     title: "Tech news app",
     description: "Tech news app for latest tech related news",
     href: "",
-    img: "/assets/work/tech.png",
+    img: "/assets/work/tech.jpg",
     tooltipContent: "Tech news app",
     github: "https://github.com/eziraa/technews",
     stack: [
