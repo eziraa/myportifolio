@@ -32,7 +32,7 @@ const Photo = () => {
           className="w-[298px] h-[298px] xl:w-[320px] mt-4 xl:h-[320px]  mix-blend-lighten absolute "
         >
           <Image
-            src="/assets/photo.png"
+            src="/assets/photo.jpg"
             alt="Ezira Yallew"
             priority
             quality={100}
@@ -51,7 +51,7 @@ const Photo = () => {
             cy={353}
             r={350}
             className="mt-4"
-            stroke="#00ff99"
+            stroke="transparent"
             strokeWidth={4}
             strokeLinecap="round"
             strokeLinejoin="round"

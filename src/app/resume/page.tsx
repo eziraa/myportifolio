@@ -50,24 +50,9 @@ const experience = {
   description: "I have 2+ years of experience in web development.",
   items: [
     {
-      company: "ABC Corp",
-      position: "Software Engineer",
-      duration: "2020-Present",
-    },
-    {
-      company: "XYZ Corp",
-      position: "Web Developer",
-      duration: "2018-2020",
-    },
-    {
-      company: "PQR Corp",
-      position: "Frontend Developer",
-      duration: "2016-2018",
-    },
-    {
-      company: "RST Corp",
-      position: "Full Stack Developer",
-      duration: "2014-2016",
+      company: "Intern at Ethioden PLC",
+      position: "Fullstack Developer",
+      duration: "2024-06 - 2024-09",
     },
   ],
 };
@@ -78,24 +63,14 @@ const education = {
   description: "I have 2+ years of experience in web development.",
   items: [
     {
-      intitution: "ABC University",
-      degree: "Software Engineer",
+      intitution: "Bahir Dar University",
+      degree: "Software Engineering",
       duration: "2020-Present",
     },
     {
-      intitution: "XYZ University",
-      degree: "Web Developer",
-      duration: "2018-2020",
-    },
-    {
-      intitution: "PQR University",
-      degree: "Frontend Developer",
-      duration: "2016-2018",
-    },
-    {
-      intitution: "RST University",
-      degree: "Full Stack Developer",
-      duration: "2014-2016",
+      intitution: "ALX",
+      degree: "Software Engineering",
+      duration: "2023-Present",
     },
   ],
 };

@@ -7,21 +7,14 @@ const services = [
   {
     num: "01",
     title: "Web Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
     href: "",
   },
   {
     num: "02",
     title: "App Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
     href: "",
   },
-  {
-    num: "03",
-    title: "UI/UX Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-    href: "",
-  },
+
 ];
 const Services = () => {
   return (
@@ -39,9 +32,9 @@ const Services = () => {
               ease: "easeIn",
             },
           }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-[60px]"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-[60px]"
         >
-          {services.map(({ num, title, description, href }, index) => (
+          {services.map(({ num, title, href }, index) => (
             <div
               className="flex-1 flex flex-col justify-center gap-6 group"
               key={index}
@@ -60,7 +53,6 @@ const Services = () => {
               <h2 className="text-[42px] font-bold leading-none group-hover:text-accent transition-all duration-500 ">
                 {title}
               </h2>
-              <p className="text-white/60">{description}</p>
               <div className="border-b border-white/20 w-full"></div>
             </div>
           ))}
